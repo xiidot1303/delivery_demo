@@ -85,7 +85,7 @@ class UserAdmin(db.Model, UserMixin):
     Model for users in admin panel
     """
     __tablename__ = 'user_admins'
-    id = db.Column(BIGINT, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), index=True)
     password_hash = db.Column(db.String(120))
 
